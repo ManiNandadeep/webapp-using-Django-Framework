@@ -1,0 +1,28 @@
+
+
+#this is a text file to understand the concept of pagination
+
+from django.core.paginator import Paginator
+posts=['1','2','3','4','5']
+p=Paginator(post,2) #paginate two posts per page
+p.num_pages #gives us number of pages required ie  ciel(5/2) 
+#we can loop through the pages by using the for loop 
+for page in page_range:
+	print(page)
+#this results in 
+1
+2
+3
+p1=p.page(1)
+>>>p1
+>>><Page 1 of 3> 
+>>>p1.object_list  
+['1','2'] 	#returns the list of objects in the page
+>>>p1.number
+1
+>>>p1.has_previous()
+False	#checks whether a page has a previous page or not
+>>>p1.has_next()
+True	#checks whether a page has a next page or not 
+>>>p1.next_page_number()
+2
