@@ -81,3 +81,6 @@ def about(request):
 
 def references(request):
     return render(request,'blog/references.html',{'title':'References'})
+
+def report(request):
+    return render(request,'blog/report.html',{'title':'Zense ProjectReport'})
